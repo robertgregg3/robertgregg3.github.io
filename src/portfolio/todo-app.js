@@ -1025,7 +1025,7 @@ function draggingListMobile(container) {
 
 function placeDraggingElement(afterElement, container){
     const draggable = document.querySelector('.dragging');
-    if(afterElement == null ) container.appendChild(draggable);
+    if(afterElement === null ) container.appendChild(draggable);
     else container.insertBefore(draggable, afterElement);
     updateLS();
 }
