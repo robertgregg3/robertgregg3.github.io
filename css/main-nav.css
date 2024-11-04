@@ -1,5 +1,4 @@
-
-.display{
+.display {
     opacity: 0;
     transition: opacity 400ms ease-in-out;
     pointer-events: none;
@@ -25,7 +24,7 @@ nav {
 
 .main-nav {
     position: fixed;
-    background: rgb(0,0,0,0.9);
+    background: rgb(0, 0, 0, 0.9);
     width: 100%;
     margin: 0;
     z-index: 2;
@@ -36,7 +35,7 @@ nav {
     padding: 0 0 0 0;
     top: 50%;
     left: 50%;
-    transform: translate( -50%, -50%);
+    transform: translate(-50%, -50%);
     display: grid;
     align-items: center;
     grid-template-columns: 50% 50%;
@@ -44,16 +43,20 @@ nav {
 }
 
 @media(max-width: 400px) {
-    .main-nav{
-        display: flex;    flex-direction: column-reverse;
+    .main-nav {
+        display: flex;
+        flex-direction: column-reverse;
         justify-content: center;
     }
+
     .nav-popup-right {
         max-width: 300px;
     }
+
     .nav-popup-right {
         border-left: none !important;
     }
+
     .nav-popup-left {
         padding-right: 0 !important;
     }
@@ -85,7 +88,7 @@ nav {
     }
 }
 
-.main-nav ul{
+.main-nav ul {
     list-style-type: none;
     padding: 0;
     height: 100%;
@@ -151,8 +154,8 @@ nav li a {
     top: 1rem;
 }
 
-.nav__logo{
-    background:url('../images/rob.png');
+.nav__logo {
+    background: url('../images/rob.png');
     width: 60px;
     height: 60px;
     background-size: contain;
@@ -162,7 +165,7 @@ nav li a {
     background-repeat: no-repeat;
 }
 
-#contact-button{
+#contact-button {
     cursor: pointer;
     color: #ffffff;
     margin-left: -0.5rem;
@@ -184,8 +187,8 @@ nav li a {
     flex-direction: column;
 }
 
-#contact-form input, 
-#contact-form textarea{
+#contact-form input,
+#contact-form textarea {
     margin: 0.5rem;
     padding: 1rem 0 0 0.5rem;
     padding: 1rem;
@@ -194,13 +197,13 @@ nav li a {
     border: none;
 }
 
-#contact-form input:focus, 
-#contact-form textarea:focus{
+#contact-form input:focus,
+#contact-form textarea:focus {
     outline: 0px;
     border: none;
 }
 
-#submit-btn{
+#submit-btn {
     background: linear-gradient(90deg, #4501c8, #fc5555);
     color: #fff;
     font-size: 1rem;
@@ -252,7 +255,7 @@ nav li a {
     border: 5px solid #3b034e;
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
     .rob-head-shot img {
         width: 121px;
         margin-left: 2rem;
@@ -260,7 +263,7 @@ nav li a {
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
     .rob-head-shot img {
         width: 100px;
         margin-left: auto;
@@ -284,13 +287,13 @@ nav li a {
     bottom: -3rem;
 }
 
-@media(max-width:800px){
+@media(max-width:800px) {
     #contact-icons {
         margin-left: 3.5rem;
     }
 }
 
-@media(max-width:400px){
+@media(max-width:400px) {
     #contact-icons {
         margin-left: 1.5rem;
     }
