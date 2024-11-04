@@ -1,42 +1,157 @@
 <!DOCTYPE html>
-  	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="The Web Dev Guy">
-	<meta name="author" content="Robert Gregg">
-	<link rel="stylesheet" href="./css/reusable-components.css">
-	<link rel="stylesheet" href="./css/main-nav.css">
-	<link rel="stylesheet" href="./css/home.css">
-	<link rel="stylesheet" href="./css/icons.css">
-	<link rel="icon" href="/images/favicon.png">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
- 	<title>Robert Gregg</title>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robert Gregg</title>
+  <link rel="stylesheet" href="./css/reusable-components.css">
+  <link rel="stylesheet" href="./css/main-nav.css">
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/icons.css">
+  <link rel="icon" href="/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <script src="//unpkg.com/globe.gl"></script>
 </head>
 <body>
-	<header>	
-		<nav class="nav__container">
-			<div id="nav-container">
+  <header>
+    <nav class="nav__container">
+		<div id="nav-container">
 				
-			</div>
-			<div class="nav__toggle">
-				<span class="nav__toggle__line nav__toggle__line-top"></span>
-				<span class="nav__toggle__line nav__toggle__line-middle"></span>
-				<span class="nav__toggle__line nav__toggle__line-bottom"></span>
-			</div>
-
-		</nav>
-		<div class="hero-container">
-			<div class="hero-container__left">
-				<h1>Hi, I'm Robert Gregg</h1>
-				<p>No need to search the whole Galaxy...</p>
-				<p>I'm here.</p>
-				<button id="get-in-touch">Get in touch</button>
-			</div>
-			<div id="earth"></div>
 		</div>
-	</header>
+		<div class="nav__toggle">
+			<span class="nav__toggle__line nav__toggle__line-top"></span>
+			<span class="nav__toggle__line nav__toggle__line-middle"></span>
+			<span class="nav__toggle__line nav__toggle__line-bottom"></span>
+		</div>
+		</nav>
+</header>
+<main>
+    <div class="hero-container">
+		<div class="nav-popup-left">
+			<div class="rob-head-shot"><img src="/images/rob.jpg" /></div>
+			<div id="contact-icons">
+				<a href="https://github.com/robertgregg3"><i class="fab fa-github-square spring"></i></a>
+				<a href="https://www.linkedin.com/in/robert-gregg-b1a66a32/"><span class="spring icon-linkedin icon"></span></a>
+			</div>
+		</div>
+      <div class="hero-container__left">
+        <h1>Hi, I'm Robert Gregg</h1>
+        <p>The search for a software engineer is over...</p>
+        <p>I'm here.</p>
+        <button id="get-in-touch">Get in touch</button>
+      </div>
+    </div>
+    <div id="globeViz"></div>
+</main>
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
 	<script src="src/responsive_menu.js"></script>
-	<script src="src/utils.js"></script>
+	<script src="//unpkg.com/three-globe"></script>
+
+	
+	<script>
+		// Gen random data
+		const N = 20;
+		const arcsData = [...Array(N).keys()].map(() => ({
+		  startLat: (Math.random() - 0.5) * 180,
+		  startLng: (Math.random() - 0.5) * 360,
+		  endLat: (Math.random() - 0.5) * 180,
+		  endLng: (Math.random() - 0.5) * 360,
+		  color: [['#e60c8b', '#4501c8', '#yellow', '#e60c8b'][Math.round(Math.random() * 3)], ['#4501c8', '#e60c8b', '#e60c8b', 'yellow'][Math.round(Math.random() * 3)]]
+		}));
+	
+		const world = Globe()
+		  .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+		  .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+		  .arcsData(arcsData)
+		  .arcColor('color')
+		  .arcDashLength(() => Math.random())
+		  .arcDashGap(() => Math.random())
+		  .pointOfView({ altitude: 2 })
+		  .arcDashAnimateTime(() => Math.random() * 4000 + 500)
+		(document.getElementById('globeViz'))
+
+		world.controls().autoRotate = true; // Enable auto-rotation
+		world.controls().autoRotateSpeed = 1; // Set the rotation speed (default is 2)
+	
+	  </script>
+
+
+	<script>
+
+		// const world = Globe()
+		// (document.getElementById('globeViz'))
+		
+		// fetch('./ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries =>
+		// { 
+		// 	world
+		// 	.backgroundImageUrl('./images/space.jpg')
+		// 	.hexPolygonsData(countries.features)
+		// 	.hexPolygonResolution(3)
+		// 	.hexPolygonMargin(0.3)
+		// 	.showAtmosphere(false)
+		// 	.hexPolygonUseDots(true)
+		// 	.hexPolygonColor(() => `#ffffff`)
+		// 	.pointOfView({ altitude: 2 })
+		// 	(document.getElementById('globeViz'))
+		// });
+
+		
+
+		
+		// const COUNTRY = 'United States';
+		// const OPACITY = 0.22;
+
+		// const myGlobe = Globe()
+		//   (document.getElementById('globeViz'))
+	  
+		//   .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+		//   .pointOfView({ lat: 39.6, lng: -98.5, altitude: 2 }) // aim at continental US centroid
+		//   .backgroundImageUrl('./images/space.jpg')
+		//   .arcLabel(d => `${d.airline}: ${d.srcIata} &#8594; ${d.dstIata}`)
+		//   .arcStartLat(d => +d.srcAirport.lat)
+		//   .arcStartLng(d => +d.srcAirport.lng)
+		//   .arcEndLat(d => +d.dstAirport.lat)
+		//   .arcEndLng(d => +d.dstAirport.lng)
+		//   .arcDashLength(0.25)
+		//   .arcDashGap(1)
+		//   .arcDashInitialGap(() => Math.random())
+		//   .arcDashAnimateTime(4000)
+		//   .arcColor(d => [`rgba(0, 255, 0, ${OPACITY})`, `rgba(255, 0, 0, ${OPACITY})`])
+		//   .arcsTransitionDuration(0)
+	  
+		//   .pointColor(() => 'orange')
+		//   .pointAltitude(0)
+		//   .pointRadius(0.02)
+		//   .pointsMerge(true);
+	  
+		// // load data
+	  
+		// const airportParse = ([airportId, name, city, country, iata, icao, lat, lng, alt, timezone, dst, tz, type, source]) => ({ airportId, name, city, country, iata, icao, lat, lng, alt, timezone, dst, tz, type, source });
+		// const routeParse = ([airline, airlineId, srcIata, srcAirportId, dstIata, dstAirportId, codeshare, stops, equipment]) => ({ airline, airlineId, srcIata, srcAirportId, dstIata, dstAirportId, codeshare, stops, equipment});
+	  
+		// Promise.all([
+		//   fetch('https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat').then(res => res.text())
+		// 	.then(d => d3.csvParseRows(d, airportParse)),
+		//   fetch('https://raw.githubusercontent.com/jpatokal/openflights/master/data/routes.dat').then(res => res.text())
+		// 	.then(d => d3.csvParseRows(d, routeParse))
+		// ]).then(([airports, routes]) => {
+	  
+		//   const byIata = indexBy(airports, 'iata', false);
+	  
+		//   const filteredRoutes = routes
+		// 	.filter(d => byIata.hasOwnProperty(d.srcIata) && byIata.hasOwnProperty(d.dstIata)) // exclude unknown airports
+		// 	.filter(d => d.stops === '0') // non-stop flights only
+		// 	.map(d => Object.assign(d, {
+		// 	  srcAirport: byIata[d.srcIata],
+		// 	  dstAirport: byIata[d.dstIata]
+		// 	}))
+		// 	.filter(d => d.srcAirport.country === COUNTRY && d.dstAirport.country !== COUNTRY); // international routes from country
+	  
+		//   myGlobe
+		// 	.pointsData(airports)
+		// 	.arcsData(filteredRoutes);
+		// });
+	  </script>
 </body>
 </html>

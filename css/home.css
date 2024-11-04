@@ -1,33 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@100;300;400;700&display=swap');
 
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    font-size: 1.2rem;
+    letter-spacing: -0.5px;
+    line-height: 24px;
+    background: rgba(0,0,0,1);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 40% auto;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+}
+
 .display{
     opacity: 0;
     transition: opacity 400ms ease-in-out;
     pointer-events: none;
 }
 
-header{
-    background: url('../images/space.jpg');
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center center;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
+#globeViz {
+    margin-left: -20%;
+    position: relative;
+    z-index: 1;
 }
 
-button{
-    background: linear-gradient(90deg, #4501c8, #fc5555);
-    color: #fff;
-    font-size: 1rem;
-    padding: 1rem 3rem;
-    border: none;
-    border-radius: 35px;
-    cursor: pointer;
-    margin: 1rem 0;
-    display:inline-block;
+@media(max-width: 950px) {
+    #globeViz {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -50%;
+    }
+}
+
+.hero-container {
+    min-height: 100svh;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%,  rgba(0,0,0,0) 100%);
     position: relative;
+    z-index: 2;
+    display: grid;
+    align-content: center;
+    grid-gap: 6rem;
 }
 
 .hero-container__left{
@@ -41,63 +66,4 @@ button{
     line-height: normal;
 }
 
-.hero-container__right{
-    background: url('../images/world.jpg');
-    min-width: 450px;
-    height: 450px;
-    border-radius: 50%;
-}
 
-
-#earth {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    transition: transform 200ms linear;
-    animation: rotate 80s linear infinite;
-    border-radius: 50%;
-    background: url(../images/world.jpg) 0 0 repeat;
-    box-shadow: inset 0px 0 -12px 8px rgba(0, 0, 0, 1);
-    background-size: cover;
-    transform-style: preserve-3d;
-}
-
-#earth:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: '';
-  border-radius: 50%;
-  box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset;
-}
-
-@keyframes rotate {
-  0% {background-position: 0 0;}
-  100% {background-position: 630px 0;}
-}
-
-@media (max-width:840px) {
-    #earth {
-    width: 200px;
-    height: 200px;
-    }
-}
-
-@media (max-width:740px) {
-    #earth {
-    width: 200px;
-    height: 200px;
-    }
-}
-
-@media (max-width:600px) {
-    .hero-container{
-        padding: 2rem;
-        flex-direction: column;
-    }
-    .countdown-container{
-        width: 280px;
-    }
-}
