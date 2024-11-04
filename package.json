@@ -1,0 +1,19 @@
+{
+  "name": "robertgregg.co.uk",
+  "version": "1.0.0",
+  "description": "Personal Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertgregg3/robertgregg3.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertgregg3/robertgregg3.github.io/issues"
+  },
+  "homepage": "https://github.com/robertgregg3/robertgregg3.github.io#readme"
+}
