@@ -116,7 +116,7 @@ function triggerContact() {
   const formInputs = document.querySelectorAll("input");
 
   contactContainer.classList.toggle("hidden");
-  menuItemArrow.classList.toggle("point-down");
+  menuItemArrow.classList.toggle("point-left");
 
   menuItems.forEach((item) => {
     item.classList.toggle("hidden");

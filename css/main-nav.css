@@ -234,8 +234,8 @@ nav li a {
     position: absolute;
 }
 
-.point-down {
-    transform: rotate(90deg);
+.point-left {
+    transform: rotate(180deg);
     transition: transform 1000ms ease-in-out;
 }
 
