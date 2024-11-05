@@ -68,4 +68,5 @@ button{
     padding: 2.5rem;
     font-size: 1.1rem;
     cursor: pointer;
+    margin: 0;
 }
