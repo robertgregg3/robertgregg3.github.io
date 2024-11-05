@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@100;300;400;700&display=swap');
+
 body {
   background: rgb(46, 50, 135);
+  font-family: "Roboto", sans-serif;
   background: linear-gradient(
     90deg,
     rgba(46, 50, 135, 1) 0%,
