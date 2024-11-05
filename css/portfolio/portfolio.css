@@ -52,7 +52,10 @@ body {
 
 @media (max-width: 600px) {
   .pf-category {
-    width: 45%;
+    width: 250px;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+    gap: 1rem;
   }
 }
 
