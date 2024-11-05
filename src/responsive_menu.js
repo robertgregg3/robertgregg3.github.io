@@ -85,15 +85,15 @@ function addMenuData(menuData) {
 					<li>
 						<div id="contact-container" class="hidden">
 							<form 
-							action="https://formspree.io/f/xrgokqda" 
+							action="https://formspree.io/f/mpwzdank" 
 							method="POST" 
 							id="contact-form"
 							>
-								<input id="name" type="text" placeholder="name" name="name"/>
-								<input id="email" type="email" placeholder="email" name="email" />
-								<textarea id="textarea" placeholder="message" name="message"></textarea>
+								<input id="name" type="text" placeholder="name" name="name" required />
+								<input id="email" type="email" placeholder="email" name="email" required />
+								<textarea id="textarea" placeholder="message" name="message" required></textarea>
+								<button id="submit-btn" type="submit" value="Send">Send</button>
 								<div id="my-form-status"></div>
-								<input id="submit-btn" type="submit" value="Send">
 							</form>
 						</div>
 					</li>
@@ -139,14 +139,23 @@ window.addEventListener("DOMContentLoaded", function () {
 
   function success() {
     form.reset();
-    submitBtn.style = "display: none ";
+
+    if (submitBtn) {
+      submitBtn.style.display = "none";
+    }
+    if (inputName) {
+      inputName.style.display = "none";
+    }
+    if (inputEmail) {
+      inputEmail.style.display = "none";
+    }
+    if (inputTextarea) {
+      inputTextarea.style.display = "none";
+    }
+
     status.innerHTML =
       "Thanks! Your form was submitted successfully. I will usually respond within 24 hours";
-    inputName.style = "display: none";
-    inputEmail.style = "display: none";
-    inputTextarea.style = "display: none";
   }
-
   function error() {
     status.innerHTML =
       "Oops! There was a problem.  Please check that you have filled in the form correctly";
