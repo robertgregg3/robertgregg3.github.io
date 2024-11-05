@@ -8,20 +8,20 @@ body {
     letter-spacing: -0.5px;
     line-height: 24px;
     background: rgba(0,0,0,1);
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center center;
     color: #ffffff;
 }
 
 main {
-    display: grid;
-    grid-template-columns: 40% auto;
     overflow-x: hidden;
 }
 
 header {
     position: absolute;
+}
+
+.wrapper {
+    display: flex;
+    grid-template-columns: 40% auto;
 }
 
 .display{
@@ -62,8 +62,8 @@ header {
         margin-top: 0%;
     }
 
-    main {
-        grid-template-columns: 1fr;
+    .wrapper {
+        flex-wrap: wrap;
         min-height: 100svh;
     }
 
@@ -85,7 +85,7 @@ header {
     padding-right: 3rem;
 }
 
-@media(max-width: 650px) {
+@media(max-width: 725px) {
     .hero-container {
        grid-template-columns: 1fr;
        text-align: center;
