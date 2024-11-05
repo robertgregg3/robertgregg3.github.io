@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@100;300;400;700&display=swap');
 
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+    /* background: rgb(247, 30, 30, 0.1) */
+}
+
 body {
     font-family: "Robotto", sans-serif;
-    margin: 0;
     font-size: 1.2rem;
     letter-spacing: -0.5px;
     line-height: 24px;
@@ -85,6 +90,10 @@ header {
 
 .hero-container__left{
     padding-right: 3rem;
+    display: grid;
+    grid-gap: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 @media(max-width: 725px) {

@@ -25,21 +25,27 @@ nav {
 .main-nav {
     position: fixed;
     background: rgb(0, 0, 0, 0.9);
-    width: 100%;
+    width: 50%;
     margin: 0;
-    z-index: 2;
+    z-index: 10;
     transition: opacity 400ms ease-in-out;
     overflow: auto;
     overflow-x: hidden;
     height: 100%;
     padding: 0 0 0 0;
     top: 50%;
-    left: 50%;
+    right: -25%;
     transform: translate(-50%, -50%);
     display: grid;
     align-items: center;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr;
     justify-content: center;
+}
+
+@media(max-width: 950px) {
+    .main-nav{
+        width: calc(100% - 40%)
+    }
 }
 
 @media(max-width: 400px) {
@@ -70,8 +76,7 @@ nav {
 .nav-popup-right {
     width: 100%;
     border-left: 1px solid #ffffff;
-    height: 100%;
-    max-height: 350px;
+    height: 100svh;
 }
 
 @media(max-width: 800px) {
@@ -99,9 +104,7 @@ nav {
 .main-nav ul li {
     width: 100%;
     text-align: center;
-    padding: 1rem;
 }
-
 
 nav li a {
     color: #ffffff;
@@ -124,7 +127,7 @@ nav li a {
     right: 2rem;
     top: 2rem;
     cursor: pointer;
-    z-index: 4;
+    z-index: 10;
 }
 
 .nav__toggle__line {
