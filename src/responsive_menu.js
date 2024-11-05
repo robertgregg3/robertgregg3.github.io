@@ -9,6 +9,37 @@ const submitBtn = document.getElementById("submit-btn");
 
 let root = "https://robertgregg3.github.io/";
 
+const styles = [
+  "color: green",
+  "font-size: 20px",
+  "font-weight: bold",
+  "text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1)",
+  "padding: 10px 0",
+].join(";");
+
+console.log("%cHi there 👋 !", styles);
+console.log("%cIts your lucky day 🌍", styles);
+console.log("%cNo need to look any further 🎉🎁 😅", styles);
+console.log(
+  "%c... I am here! ",
+  "color: orange; font-size: 16px; font-weight: bold;"
+);
+console.log(
+  "%cI look forward to hearing from you 🕵️‍♂️",
+  "color: blue; font-size: 14px;"
+);
+
+// Override console.warn to suppress specific warnings
+const originalWarn = console.warn;
+console.warn = function (message, ...optionalParams) {
+  // Check if the message contains a specific warning you want to suppress
+  if (message.includes("Multiple instances of Three.js being imported")) {
+    return; // Skip logging this warning
+  }
+  // Call the original console.warn for other messages
+  originalWarn.call(console, message, ...optionalParams);
+};
+
 const menuData = [
   {
     page_title: "Home",
@@ -132,8 +163,8 @@ addMenuData(menuData);
 window.addEventListener("DOMContentLoaded", function () {
   // get the form elements defined in your form HTML above
 
-  var form = document.getElementById("contact-form");
-  var status = document.getElementById("my-form-status");
+  let form = document.getElementById("contact-form");
+  let status = document.getElementById("my-form-status");
 
   // Success and Error functions for after the form is submitted
 
@@ -165,7 +196,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   form.addEventListener("submit", function (ev) {
     ev.preventDefault();
-    var data = new FormData(form);
+    let data = new FormData(form);
     ajax(form.method, form.action, data, success, error);
   });
 });
@@ -173,7 +204,7 @@ window.addEventListener("DOMContentLoaded", function () {
 // helper function for sending an AJAX request
 
 function ajax(method, url, data, success, error) {
-  var xhr = new XMLHttpRequest();
+  let xhr = new XMLHttpRequest();
   xhr.open(method, url);
   xhr.setRequestHeader("Accept", "application/json");
   xhr.onreadystatechange = function () {
