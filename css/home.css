@@ -36,14 +36,7 @@ header {
     z-index: 1;
 }
 
-@media(max-width: 950px) {
-    #globeViz {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -50%;
-    }
-}
+
 
 .hero-container {
     min-height: 100svh;
@@ -52,12 +45,62 @@ header {
     z-index: 2;
     display: grid;
     align-content: center;
-    grid-gap: 6rem;
+    grid-gap: 1rem;
+}
+
+@media(max-width: 1200px) {
+    .hero-container {
+       min-width: 500px;
+    }
+}
+
+@media(max-width: 950px) {
+    #globeViz {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        min-height: 100svh;
+    }
+
+    .hero-container {
+        grid-gap: 0rem;
+        min-width: 100%;
+        background: linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%,  rgba(0,0,0,0) 100%);
+        min-height: 50svh;
+        grid-template-columns: 170px auto;
+    }
+
+    .rob-head-shot img {
+        width: 180px;
+        height: 180px;
+    }
 }
 
 .hero-container__left{
     padding-right: 3rem;
 }
+
+@media(max-width: 650px) {
+    .hero-container {
+       grid-template-columns: 1fr;
+       text-align: center;
+    }
+
+    .hero-container__left {
+        padding-right: 0rem;
+    }
+
+    #globeViz {
+        margin-top: -10%;
+    }
+}
+
+
 
 .hero-container__left h1{
     font-family: 'Bangers', Roboto;

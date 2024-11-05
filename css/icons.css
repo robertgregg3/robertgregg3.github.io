@@ -151,9 +151,9 @@
 
 .icon-linkedin {
   background: url("../images/icons/linkedin.svg");
-  position: absolute;
-  top: -0.4rem;
-  left: 3rem;
+  width: 48px;
+  height: 48px;
+  display: block;
 }
 
 .pf-tag.icon-mern {
@@ -165,8 +165,6 @@
 .fa-github-square {
   font-size: 2.55rem;
   color: #fff;
-  margin-top: -2px;
-  margin-left: -0.7rem;
 }
 
 @media (max-width: 800px) {

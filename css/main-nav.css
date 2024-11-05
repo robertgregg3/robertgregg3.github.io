@@ -63,10 +63,8 @@ nav {
 }
 
 .nav-popup-left {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    place-items: center;
 }
 
 .nav-popup-right {
@@ -207,7 +205,6 @@ nav li a {
 #submit-btn {
     background: linear-gradient(90deg, #4501c8, #fc5555);
     color: #fff;
-    padding: 1rem 3rem;
     border: none;
     border-radius: 35px;
     margin: 1rem 0;
@@ -242,17 +239,17 @@ nav li a {
 }
 
 .rob-head-shot {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    display: grid;
+    place-items: center;
+    grid-gap: 1rem;
+    margin-left: -2rem;
 }
 
 .rob-head-shot img {
-    width: 180px;
+    height: 280px;
+    width: 280px;
     border-radius: 50%;
-    margin-left: -2rem;
     object-fit: cover;
-    height: 180px;
     object-position: top;
     border: 5px solid #3b034e;
 }
@@ -281,12 +278,13 @@ nav li a {
 
 
 #contact-icons {
-    position: absolute;
     display: grid;
-    width: 105px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
+    justify-items: flex-start;
+    width: fit-content;
+    align-items: center;
+    grid-gap: 1rem;
     justify-content: center;
-    bottom: -3rem;
 }
 
 @media(max-width:800px) {
