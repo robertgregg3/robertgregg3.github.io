@@ -21,7 +21,6 @@ header {
 
 .wrapper {
     display: flex;
-    grid-template-columns: 40% auto;
 }
 
 .display{
@@ -34,12 +33,15 @@ header {
     margin-left: -20%;
     position: relative;
     z-index: 1;
+    flex-basis: 60%;
+    flex-grow: 0
 }
 
 
 
 .hero-container {
     min-height: 100svh;
+    min-width: 600px;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%,  rgba(0,0,0,0) 100%);
     position: relative;
     z-index: 2;
