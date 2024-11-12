@@ -13,10 +13,10 @@ const portfolioCategoryData = [
   "all",
   "api",
   "back-end",
-  // "big-data",
+  "big-data",
   "bootstrap",
   "css3",
-  // "data-vis",
+  "data-vis",
   "front-end",
   "firebase",
   "html",
@@ -35,20 +35,20 @@ const portfolioCategoryData = [
 
 // portfolio Item
 const portfolioItemData = [
-  // {
-  //   title: "data-vis",
-  //   skill1: "back-end",
-  //   skill2: "front-end",
-  //   skill3: "data-vis",
-  //   skill5: "javascript",
-  //   skill6: "react",
-  //   skill7: "firebase",
-  //   skill9: "api",
-  //   skill10: "big-data",
-  //   details:
-  //     "This showcases some basic Data visualisation skills using D3 charting library. Created in 2021. Features include: Logging in / out flow with firebase for authentication which is also used as the data base, Processing very complex data and displaying in several chart layouts, Download an image of the chart data in JPEG / PNG formats, Mostly responsive. The app takes in a 20k+ line of CSV data, formats it, sorts it and displays the data in various formats.  The client I created this for were enabled to upload the csv file to then be processed. They were also allowed to download that csv and upload a new one. This has been disabled to put into my portfolio website but the functionality is still there.",
-  //   url: "https://linkedin-clone-rob.web.app/",
-  // },
+  {
+    title: "data-vis",
+    skill1: "back-end",
+    skill2: "front-end",
+    skill3: "data-vis",
+    skill5: "javascript",
+    skill6: "react",
+    skill7: "firebase",
+    skill9: "api",
+    skill10: "big-data",
+    details:
+      "This showcases some basic Data visualisation skills using D3 charting library. Created in 2021. Features include:  <ul><li>Logging in / out flow with firebase for authentication</li><li>Firebase for the data base</li><li>Processing very complex data and displaying in several chart layouts</li><li>Download an image of the chart data in JPEG / PNG formats</li><li>The app takes in a 20k+ line of CSV data, formats it, sorts it and displays the data in various formats</li><li>Uploading new data / downloading current data.  Note: The client I created this for were enabled to upload the csv file to then be processed. They were also allowed to download that csv and upload a new one. This has been disabled to put into my portfolio website but the functionality is still there. </li><li>Logging in / out flow with firebase for authentication which is also used as the data base</li><li>Logging in / out flow with firebase for authentication which is also used as the data base</li></ul>",
+    url: "https://6733e3287ea2be0008c8e20c--data-vis-atainr.netlify.app/",
+  },
   {
     title: "linkedin-clone",
     skill1: "back-end",
