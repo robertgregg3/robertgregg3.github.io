@@ -13,8 +13,10 @@ const portfolioCategoryData = [
   "all",
   "api",
   "back-end",
+  // "big-data",
   "bootstrap",
   "css3",
+  // "data-vis",
   "front-end",
   "firebase",
   "html",
@@ -33,6 +35,20 @@ const portfolioCategoryData = [
 
 // portfolio Item
 const portfolioItemData = [
+  // {
+  //   title: "data-vis",
+  //   skill1: "back-end",
+  //   skill2: "front-end",
+  //   skill3: "data-vis",
+  //   skill5: "javascript",
+  //   skill6: "react",
+  //   skill7: "firebase",
+  //   skill9: "api",
+  //   skill10: "big-data",
+  //   details:
+  //     "This showcases some basic Data visualisation skills using D3 charting library. Created in 2021. Features include: Logging in / out flow with firebase for authentication which is also used as the data base, Processing very complex data and displaying in several chart layouts, Download an image of the chart data in JPEG / PNG formats, Mostly responsive. The app takes in a 20k+ line of CSV data, formats it, sorts it and displays the data in various formats.  The client I created this for were enabled to upload the csv file to then be processed. They were also allowed to download that csv and upload a new one. This has been disabled to put into my portfolio website but the functionality is still there.",
+  //   url: "https://linkedin-clone-rob.web.app/",
+  // },
   {
     title: "linkedin-clone",
     skill1: "back-end",
@@ -221,15 +237,15 @@ const portfolioItemData = [
       "Type in the username from someone on github and the page will show their profile along with their repos.",
     url: "/portfolio/github-profiles.html",
   },
-  //   {
-  //     title: "countdown-timer",
-  //     skill1: "front-end",
-  //     skill2: "html",
-  //     skill3: "css3",
-  //     skill4: "javascript",
-  //     details: "A simple countdown timer",
-  //     url: "/portfolio/countdown-timer.html",
-  //   },
+  {
+    title: "countdown-timer",
+    skill1: "front-end",
+    skill2: "html",
+    skill3: "css3",
+    skill4: "javascript",
+    details: "A simple countdown timer",
+    url: "/portfolio/countdown-timer.html",
+  },
   {
     title: "quiz-app",
     skill1: "front-end",
