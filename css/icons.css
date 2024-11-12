@@ -45,8 +45,16 @@
 .icon-bootstrap {
   background: url("../images/icons/bootstrap.svg");
 }
+
+.icon-big-data {
+  background: url("../images/icons/big-data.png");
+}
 .icon-css3 {
   background: url("../images/icons/css3.svg");
+}
+
+.icon-data-vis {
+  background: url("../images/icons/data-vis.png");
 }
 
 .icon-firebase {
