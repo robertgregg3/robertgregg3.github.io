@@ -15,10 +15,10 @@ body {
   transition: all 300ms;
 }
 
-main {
+/* main {
   display: grid;
   grid-template-columns: 300px auto;
-}
+} */
 
 .hero-container--portfolio {
   color: #eee;
@@ -27,8 +27,8 @@ main {
 
 #pf-categories {
   list-style-type: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
   justify-content: center;
   flex-wrap: wrap;
   margin: 1rem 0;
