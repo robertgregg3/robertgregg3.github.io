@@ -47,7 +47,7 @@ const portfolioItemData = [
     skill10: "big-data",
     details:
       "This showcases some basic Data visualisation skills using D3 charting library. Created in 2021. Features include:  <ul><li>Logging in / out flow with firebase for authentication</li><li>Firebase for the data base</li><li>Processing very complex data and displaying in several chart layouts</li><li>Download an image of the chart data in JPEG / PNG formats</li><li>The app takes in a 20k+ line of CSV data, formats it, sorts it and displays the data in various formats</li><li>Uploading new data / downloading current data.  Note: The client I created this for were enabled to upload the csv file to then be processed. They were also allowed to download that csv and upload a new one. This has been disabled to put into my portfolio website but the functionality is still there. </li><li>Logging in / out flow with firebase for authentication which is also used as the data base</li><li>Logging in / out flow with firebase for authentication which is also used as the data base</li></ul>",
-    url: "https://atainr-dkqqq5f1h-robertgregg3s-projects.vercel.app/",
+    url: "https://atainr-robertgregg3s-projects.vercel.app/",
   },
   {
     title: "linkedin-clone",
