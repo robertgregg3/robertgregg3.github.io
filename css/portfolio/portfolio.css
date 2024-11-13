@@ -10,59 +10,73 @@ body {
     rgba(68, 13, 83, 1) 0%,
     rgba(9, 9, 9, 1) 100%
   );
-  min-height: 100vh;
-  position: relative;
   transition: all 300ms;
 }
 
-/* main {
-  display: grid;
-  grid-template-columns: 300px auto;
-} */
+main {
+}
 
-.hero-container--portfolio {
-  color: #eee;
-  flex-direction: column;
+.sidebar {
+  position: fixed;
+  width: 400px;
+  height: 100svh;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  padding-left: 1rem;
+}
+
+@media(max-width:750px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+.portfolio-items {
+  display: grid;
+  color: #ffffff;
+  margin-left: 400px;
+  grid-gap: 1rem;
+  padding: 2rem;
 }
 
 #pf-categories {
   list-style-type: none;
-  display: flex;
-  /* grid-template-columns: 1fr 1fr; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   flex-wrap: wrap;
   margin: 1rem 0;
   padding: 0;
+  height: 97svh;
+  grid-gap: 1rem;
+}
+
+@media(max-width:750px) {
+  #pf-categories {
+    grid-template-columns: 1fr;
+  }
+  
+  .portfolio-items {
+    margin-left: 0;
+  }
+}
+
+
+#pf-categories .pf-category:nth-last-child(1):nth-child(odd) {
+  grid-column: 1/3;
 }
 
 .pf-category {
-  padding: 1rem 0.8rem;
+  padding: 0.5rem 0.8rem;
+  background-color: #fff;
   border: 1px solid;
-  margin: 0.5rem 0.5rem;
-  flex-wrap: wrap;
   cursor: pointer;
   border-radius: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
-  /* width: 22%; */
-}
-
-@media (max-width: 700px) {
-  .pf-category {
-    padding: 0.5rem 0.5rem;
-    width: 30%;
-  }
-}
-
-@media (max-width: 600px) {
-  .pf-category {
-    width: 250px;
-    justify-content: flex-start;
-    padding: 1rem 2rem;
-    gap: 1rem;
-  }
 }
 
 .pf-category span {
@@ -116,19 +130,35 @@ body {
   top: 0;
 }
 
+
 #pf-items {
-  max-width: 1200px;
-  margin: auto;
+  grid-template-columns: 33% 34% 33%;
+  display: grid;
+  width: calc(100% - 1rem);
+  grid-gap: 2rem;
+}
+
+@media(min-width:2500px) {
+  #pf-items {
+    grid-template-columns: 25% 25% 25% 25%;
+    width: calc(100% - 1rem)    
+  }
+}
+
+@media(max-width:2000px) {
+  #pf-items {
+    grid-template-columns: 50% 50%;
+    width: calc(100% - 1rem);
+  }
+}
+
+@media(max-width:1150px) {
+  #pf-items {
+    grid-template-columns: 1fr ;
+  }
 }
 
 .pf-item {
-  display: flex;
-  flex-direction: column;
-  width: 25%;
-  padding: 1rem;
-  min-width: 400px;
-  height: 100%;
-  transition: height 300ms;
   cursor: pointer;
 }
 
@@ -140,7 +170,6 @@ body {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  height: 185px;
 }
 
 .pf-main:before {
@@ -158,8 +187,50 @@ body {
 }
 
 .pf-item-img {
-  height: 185px;
+  height: 350px;
   width: 100%;
+}
+
+@media(max-width:1500px) {
+  .pf-item-img {
+    height: 250px;
+    width: 100%;
+  }
+}
+
+@media(max-width:1300px) {
+  .pf-item-img {
+    height: 200px;
+    width: 100%;
+  }
+}
+
+@media(max-width:1150px) {
+  .pf-item-img {
+    height: 350px;
+    width: 100%;
+  }
+}
+
+@media(max-width:950px) {
+  .pf-item-img {
+    height: 180px;
+    width: 100%;
+  }
+}
+
+@media(max-width:750px) {
+  .pf-item-img {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+@media(max-width:550px) {
+  .pf-item-img {
+    height: 200px;
+    width: 100%;
+  }
 }
 
 .pf-item-hover-img {
@@ -173,10 +244,6 @@ body {
 .height {
   height: 100% !important;
   transition: height 300ms;
-}
-
-.pf-item img {
-  max-width: 100%;
 }
 
 .pf-tags {
@@ -278,11 +345,11 @@ body {
 
 .pf-popup {
   position: fixed;
-  width: 100%;
-  overflow: auto;
-  max-height: 100%;
+  overflow-y: auto;
+  max-height: 80%;
   box-shadow: 0 45px 89px rgb(0, 0, 0, 0.7);
-  max-width: 600px;
+  max-width: 700px;
+  width: 90%;
   justify-content: center;
   margin: auto;
   top: 50%;
@@ -297,17 +364,10 @@ body {
 }
 
 .popup-info {
-  max-width: 800px;
-  width: 100%;
-  display: flex;
   position: relative;
-  margin: auto;
-  flex-direction: column;
-  color: #eee;
   background-color: rgb(17 0 29 / 95%);
   border-radius: 12px;
-  align-items: center;
-  overflow-x: hidden;
+  color: #ffffff;
 }
 @media (max-width: 700px) {
   .pf-popup,
@@ -332,7 +392,7 @@ body {
 #close {
   position: absolute;
   right: 1rem;
-  top: 1rem;
+  top: 0.3rem;
   font-size: 1.8rem;
   cursor: pointer;
   z-index: 1;
@@ -348,14 +408,19 @@ body {
   padding: 1.5rem 0.5rem 0;
 }
 
+
+.project-details {
+  padding: 1rem 2rem 1rem 1rem;
+  justify-items: center;
+  /* justify-content: center; */
+}
+
 .details {
   padding: 0rem 2rem 1rem;
 }
 
 #pf-info-btn {
-  width: 192px;
   padding: 1rem 2rem;
-  margin: 0rem auto 2rem;
   border-radius: 14px;
   border: none;
   font-size: 1.2rem;

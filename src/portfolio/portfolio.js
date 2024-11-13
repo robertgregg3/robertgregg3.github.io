@@ -237,15 +237,15 @@ const portfolioItemData = [
       "Type in the username from someone on github and the page will show their profile along with their repos.",
     url: "/portfolio/github-profiles.html",
   },
-  {
-    title: "countdown-timer",
-    skill1: "front-end",
-    skill2: "html",
-    skill3: "css3",
-    skill4: "javascript",
-    details: "A simple countdown timer",
-    url: "/portfolio/countdown-timer.html",
-  },
+  // {
+  //   title: "countdown-timer",
+  //   skill1: "front-end",
+  //   skill2: "html",
+  //   skill3: "css3",
+  //   skill4: "javascript",
+  //   details: "A simple countdown timer",
+  //   url: "/portfolio/countdown-timer.html",
+  // },
   {
     title: "quiz-app",
     skill1: "front-end",
@@ -518,10 +518,12 @@ function displayPortfolioDetails(currentPfItemData) {
                     )
                     .join("")}
               </ul>
-              <p class="details">${currentPfItemData.details}</p>
+              <div class="project-details">
               <a href="${
                 currentPfItemData.url
               }"><button id="pf-info-btn">Go to project</button></a>
+                <p class="details">${currentPfItemData.details}</p>
+                </div>
               `;
 
   pfPPopupContainer.appendChild(pfPopupEl);
