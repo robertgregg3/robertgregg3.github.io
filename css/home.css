@@ -92,6 +92,7 @@ header {
     grid-gap: 1rem;
     position: relative;
     z-index: 1;
+    margin-top: 2rem;
 }
 
 @media(max-width: 725px) {

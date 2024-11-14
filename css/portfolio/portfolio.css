@@ -421,7 +421,7 @@ ul.pf-info-tags {
     height: 100%;
     max-height: 600px;
   }
-  .pf-info__left {
+  .pf-info__left img {
     display: none;
   }
 
