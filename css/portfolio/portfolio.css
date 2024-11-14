@@ -201,48 +201,41 @@ main {
 }
 
 .pf-item-img {
-  height: 350px;
   width: 100%;
 }
 
 @media(max-width:1500px) {
   .pf-item-img {
-    height: 250px;
     width: 100%;
   }
 }
 
 @media(max-width:1300px) {
   .pf-item-img {
-    height: 200px;
     width: 100%;
   }
 }
 
 @media(max-width:1150px) {
   .pf-item-img {
-    height: 350px;
     width: 100%;
   }
 }
 
 @media(max-width:950px) {
   .pf-item-img {
-    height: 180px;
     width: 100%;
   }
 }
 
 @media(max-width:750px) {
   .pf-item-img {
-    height: 300px;
     width: 100%;
   }
 }
 
 @media(max-width:550px) {
   .pf-item-img {
-    height: 200px;
     width: 100%;
   }
 }
@@ -357,21 +350,44 @@ main {
 
 /****** Popup info ******/
 
-.pf-popup {
+
+#popup-container {
   position: fixed;
-  overflow-y: auto;
-  max-height: 80%;
-  box-shadow: 0 45px 89px rgb(0, 0, 0, 0.7);
+  height: 100svh;
+  width: 100vw;
+  background-color: rgb(0,0,0,0.7);
+  top: 0;
+  left: 0;
+  overflow: visible;
+  z-index: 10;
+}
+
+.popup-info {
+  position: fixed;
+  max-height: 460px;
+  box-shadow: 0 45px 89px rgb(0, 0, 0, 0.6);
   margin: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 12px;
-  border-bottom: 1px solid #000;
-  background-color: rgb(17 0 29 / 95%);
+  background-color: rgb(17 0 29 / 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   color: #ffffff;
-  width: 100%;
+  width: calc(100% - 6rem);
   max-width: 1400px;
+  height: 100%;
+  z-index: 11;
+}
+
+.pf-info__left {
+}
+
+.pf-info__right {
+  overflow: hidden;
+  padding-bottom: 4rem;
 }
 
 .pf-popup .hidden {
@@ -380,11 +396,13 @@ main {
 
 .popup-info {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:60% 40%;
 }
 
 .pf-info__main-image {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 700px) {
@@ -395,11 +413,37 @@ main {
 
 .pf-info-header {
   position: relative;
+  text-align: center;
+  border-bottom: 1px solid rgb(255,255,255,0.5);
+  padding: 1rem;
 }
 
 .pf-info-title {
   text-align: center;
   text-transform: capitalize;
+  font-size: 2rem;
+  margin: 1rem 0 0;
+}
+
+/* Style the entire scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust width as needed */
+}
+
+/* Style the track (background) */
+::-webkit-scrollbar-track {
+  background: #2f016a; /* Track color */
+}
+
+/* Style the thumb (scroll handle) */
+::-webkit-scrollbar-thumb {
+  background: #e60c8b; /* Handle color */
+  border-radius: 6px; /* Rounded corners */
+}
+
+/* Hover effect for the handle */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color when hovering */
 }
 
 #close {
@@ -423,13 +467,17 @@ main {
 
 
 .project-details {
-  padding: 1rem 2rem 1rem 1rem;
-  justify-items: center;
-  /* justify-content: center; */
+  padding: 0rem 1rem 1rem 2rem;
+  height: 70%;
+  overflow-y: auto;
 }
 
-.details {
-  padding: 0rem 2rem 1rem;
+.project-details ul {
+  margin: 1rem 1rem 1rem 1.5rem;
+}
+
+ul.pf-info-tags {
+  margin: 0;
 }
 
 #pf-info-btn {

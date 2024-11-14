@@ -26,8 +26,6 @@ const portfolioCategoryData = [
   "nodejs",
   "react",
   "redux",
-  "photoshop",
-  "premiere-pro",
   "typescript",
   "uiux",
   "websites",
@@ -501,28 +499,35 @@ function displayPortfolioDetails(currentPfItemData) {
     }
 
   pfPopupEl.innerHTML = `
-              <div id="close">
-                  <i class="fas fa-times"></i>
+              <div class="pf-info__left">
+                <div id="close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <img 
+                  src="/images/${url + 2}.jpg" 
+                  alt="${currentPfItemData.title}"
+                  class="pf-info__main-image"
+                >
               </div>
-              <div class="pf-info-header">
-                  <h3 class="pf-info-title">${currentPfItemData.title}</h3>
-              </div>
-              <img src="/images/${url + 2}.jpg" alt="${
-    currentPfItemData.title
-  }">
-              <ul class="pf-info-tags">
-                  ${tagSkillsPopupEl
-                    .map(
-                      (tag) =>
-                        `<li class="pf-tag spring icon icon-${tag}">${tag}</li>`
-                    )
-                    .join("")}
-              </ul>
-              <div class="project-details">
-              <a href="${
-                currentPfItemData.url
-              }"><button id="pf-info-btn">Go to project</button></a>
-                <p class="details">${currentPfItemData.details}</p>
+              <div class="pf-info__right">
+                <div class="pf-info-header">
+                    <h3 class="pf-info-title">${currentPfItemData.title}</h3>
+                    <a href="${
+                      currentPfItemData.url
+                    }"><button id="pf-info-btn">Go to project</button></a>
+                </div>
+                
+                <div class="project-details">
+                 <ul class="pf-info-tags">
+                    ${tagSkillsPopupEl
+                      .map(
+                        (tag) =>
+                          `<li class="pf-tag spring icon icon-${tag}">${tag}</li>`
+                      )
+                      .join("")}
+                </ul>
+                  <p class="details">${currentPfItemData.details}</p>
+                  </div>
                 </div>
               `;
 
