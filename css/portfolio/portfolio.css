@@ -11,9 +11,12 @@ body {
     rgba(9, 9, 9, 1) 100%
   );
   transition: all 300ms;
+  overflow-x: hidden;
 }
 
 main {
+  display: grid;
+  grid-template-columns: calc(100% - 4.5rem);
 }
 
 .sidebar {
@@ -22,7 +25,7 @@ main {
   top: 0;
   left: 0;
   overflow-y: auto;
-  padding-left: 1rem;
+  padding: 1rem;
 }
 
 @media(max-width:750px) {
@@ -347,15 +350,16 @@ main {
   overflow-y: auto;
   max-height: 80%;
   box-shadow: 0 45px 89px rgb(0, 0, 0, 0.7);
-  max-width: 700px;
-  width: 90%;
-  justify-content: center;
   margin: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 12px;
   border-bottom: 1px solid #000;
+  background-color: rgb(17 0 29 / 95%);
+  color: #ffffff;
+  width: 100%;
+  max-width: 1400px;
 }
 
 .pf-popup .hidden {
@@ -363,20 +367,18 @@ main {
 }
 
 .popup-info {
-  position: relative;
-  background-color: rgb(17 0 29 / 95%);
-  border-radius: 12px;
-  color: #ffffff;
-}
-@media (max-width: 700px) {
-  .pf-popup,
-  .popup-info {
-    border-radius: 0;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.popup-info img {
-  width: 100%;
+.pf-info__main-image {
+  width: auto;
+}
+
+@media (max-width: 700px) {
+  .pf-popup {
+    border-radius: 0;
+  }
 }
 
 .pf-info-header {
