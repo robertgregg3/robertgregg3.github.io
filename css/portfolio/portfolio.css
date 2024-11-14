@@ -376,7 +376,7 @@ main {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: #ffffff;
-  width: calc(100% - 6rem);
+  width: calc(100% - 2rem);
   max-width: 1400px;
   height: 100%;
   z-index: 11;
@@ -418,26 +418,17 @@ ul.pf-info-tags {
   .popup-info {
     grid-template-columns:1fr;
     overflow-y: auto;
-    height: calc(90% - 4rem);
-    max-height: calc(90% - 4rem);
-  }
-}
-
-@media(max-height:900px) {
-  .popup-info {
-    display: block;
     height: 100%;
-    max-height: 100svh;
-    overflow-y: auto;
+    max-height: 600px;
   }
-}
+  .pf-info__left {
+    display: none;
+  }
 
-@media(max-width:500px) {
-  .popup-info {
-    grid-template-columns:1fr;
-    overflow-y: auto;
-    /* max-height: calc(95% - 4rem) */
-  }
+  .pf-info__right {
+    overflow: hidden;
+    padding-bottom: 4rem;
+}
 
   .project-details ul {
     margin: 1rem 0rem 1rem 0rem;
