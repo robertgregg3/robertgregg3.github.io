@@ -19,6 +19,18 @@ main {
   grid-template-columns: calc(100% - 4.5rem);
 }
 
+@media(max-width:2200px) {
+  main {
+    grid-template-columns: calc(100% - 2.5rem);
+  }
+}
+
+@media(max-width:1700px) {
+  main {
+    grid-template-columns: 100%;
+  }
+}
+
 .sidebar {
   position: fixed;
   width: 400px;
@@ -372,7 +384,7 @@ main {
 }
 
 .pf-info__main-image {
-  width: auto;
+  width: 100%;
 }
 
 @media (max-width: 700px) {
