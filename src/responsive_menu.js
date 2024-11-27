@@ -53,7 +53,7 @@ const menuData = [
   },
   {
     page_title: "CV",
-    url: root + `images/pdf/cv.pdf`,
+    url: root + `images/pdf/robert-gregg-cv.pdf`,
     alt: "View My CV!",
   },
   {
