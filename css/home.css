@@ -59,6 +59,10 @@ header {
     }
 }
 
+button {
+    max-width: 300px;
+}
+
 @media(max-width: 950px) {
     #globeViz {
         left: 50%;
