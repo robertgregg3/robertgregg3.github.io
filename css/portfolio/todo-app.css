@@ -529,6 +529,7 @@ small {
   background-color: transparent;
   cursor: pointer;
   margin-top: 0.3rem;
+  color: #333333;
 }
 
 #delete-completed {
@@ -669,7 +670,7 @@ input[type="checkbox"]:focus::after {
   width: 64%;
   top: 0;
   overflow-y: auto;
-  height: 60px;
+  /* height: 60px; */
   -webkit-user-select: text;
   user-select: text;
 }
